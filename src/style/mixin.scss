@@ -1,0 +1,50 @@
+/*Author wangsheng*/
+@mixin bis($url){//定义背景图片
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@mixin flex($direction:row){
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin wh($w,$h){//定义宽高
+    width: $w;
+    height: $h;
+}
+
+@mixin pcenter{//定位居中
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin hc{//水平居中
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin vc{//垂直居中
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin mauto{//左右居中
+    margin: 0 atuo;
+}
+
+@mixin font($size,$lineh,$color:#000,$family:'Microsofy YaHei'){//字体
+    color: $color;
+    font: #{$size}/#{$lineh} $family;
+}
+
+@mixin border($color:#000,$width:1px,$type:solid){
+    border-style: $type;
+    border-width: $width;
+    border-color: $color;
+}
